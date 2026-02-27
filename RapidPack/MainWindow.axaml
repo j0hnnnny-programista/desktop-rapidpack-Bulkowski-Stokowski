@@ -8,9 +8,27 @@
     <Grid>
         <StackPanel>
             <TextBlock>CodePost Form</TextBlock>
-        </StackPanel>
-        <StackPanel>
-            
+            <WrapPanel>
+                <TextBlock>Wysokość paczki (cm): </TextBlock><TextBox x:Name="PackHeight"/>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock>Szerokość paczki (cm): </TextBlock><TextBox x:Name="PackWidth"/>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock>Głębokość paczki (cm):</TextBlock><TextBox x:Name="PackDepth"/>
+                
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock>Waga paczki (kg): </TextBlock><TextBox x:Name="PackWeight"/>
+                                                                  
+            </WrapPanel>
+            <CheckBox IsChecked="False" Content="Express (+15zł)" x:Name="Express"/>
+            <ComboBox SelectedIndex="0">
+                <ComboBoxItem Content="Standardowa" />
+                <ComboBoxItem Content="Ostrożenie (+10zł)"/>
+                <ComboBoxItem Content="Paleta (cena: 100zł)"/>
+            </ComboBox>
+            <Button Content="Wyceń"/>
         </StackPanel>
     </Grid>
     
