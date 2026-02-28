@@ -2,13 +2,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="700" Width="450" Height="700"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="700" Width="500" Height="700"
         x:Class="RapidPack.MainWindow"
         Title="RapidPack">
         
-    <Grid>
+    <Grid Background="WhiteSmoke">
+        <Border Background="CadetBlue" CornerRadius="15" Margin="30" Padding="20" BoxShadow="0 5 30 4 #40000000">
         <StackPanel>
-            <TextBlock FontWeight="Bold" FontSize="30" Margin="10" TextAlignment="Center">CodePost Form</TextBlock>
+            <TextBlock FontWeight="Bold" FontFamily="Arial" Foreground="White" FontSize="30" Margin="10" TextAlignment="Center">CodePost Form</TextBlock>
             
             <TextBlock Margin="0,10" HorizontalAlignment="Center">Wysokość paczki (cm): </TextBlock>
             <TextBox Margin="0,10" HorizontalAlignment="Center" x:Name="PackHeight" Watermark="np. 50"/>
@@ -29,8 +30,19 @@
                 <ComboBoxItem Content="Ostrożenie (+10zł)"/>
                 <ComboBoxItem Content="Paleta (cena: 100zł)"/>
             </ComboBox>
-            <Button HorizontalAlignment="Center" Margin="0,10" Content="Wyceń"/>
+            
+            <Button
+                Background="Coral"
+                Foreground="White"
+                FontSize="20"
+                MaxWidth="200"
+                Height="50"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                CornerRadius="5"
+                HorizontalAlignment="Center" Margin="0,10" Content="Wyceń"/>
         </StackPanel>
+        </Border>
     </Grid>
     
 </Window>
