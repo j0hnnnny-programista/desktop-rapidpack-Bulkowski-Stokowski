@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="700" Width="500" Height="700"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="730" Width="500" Height="730"
         x:Class="RapidPack.MainWindow"
         Title="RapidPack">
         
@@ -25,12 +25,11 @@
                                                                   
             
             <CheckBox HorizontalAlignment="Center" Margin="0,10" IsChecked="False" Content="Express (+15zł)" x:Name="Express"/>
-            <ComboBox HorizontalAlignment="Center" Margin="0,10" SelectedIndex="0" x:Name="Combobox">
+            <ComboBox HorizontalAlignment="Center" Margin="0,10" SelectedIndex="0" x:Name="ComboBox">
                 <ComboBoxItem Content="Standardowa" />
                 <ComboBoxItem Content="Ostrożenie (+10zł)"/>
                 <ComboBoxItem Content="Paleta (cena: 100zł)"/>
             </ComboBox>
-            
             <Button
                 Background="Coral"
                 Foreground="White"
@@ -43,6 +42,7 @@
                 HorizontalAlignment="Center" Margin="0,10" Content="Wyceń"
                 x:Name="Button"
                 />
+            <TextBox Margin="0,10" Padding="5" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="TotalPrice" Watermark="Cena" IsReadOnly="True" TextAlignment="Center"/>
         </StackPanel>
         </Border>
     </Grid>
