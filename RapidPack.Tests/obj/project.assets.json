@@ -2362,19 +2362,19 @@
     ]
   },
   "packageFolders": {
-    "/home/wojteks/.nuget/packages/": {}
+    "C:\\Users\\LEVEL_UP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/wojteks/RiderProjects/desktop-rapidpack-Bulkowski-Stokowski/RapidPack.Tests/RapidPack.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\LEVEL_UP\\RiderProjects\\desktop-rapidpack-Bulkowski-Stokowski\\RapidPack.Tests\\RapidPack.Tests.csproj",
       "projectName": "RapidPack.Tests",
-      "projectPath": "/home/wojteks/RiderProjects/desktop-rapidpack-Bulkowski-Stokowski/RapidPack.Tests/RapidPack.Tests.csproj",
-      "packagesPath": "/home/wojteks/.nuget/packages/",
-      "outputPath": "/home/wojteks/RiderProjects/desktop-rapidpack-Bulkowski-Stokowski/RapidPack.Tests/obj/",
+      "projectPath": "C:\\Users\\LEVEL_UP\\RiderProjects\\desktop-rapidpack-Bulkowski-Stokowski\\RapidPack.Tests\\RapidPack.Tests.csproj",
+      "packagesPath": "C:\\Users\\LEVEL_UP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LEVEL_UP\\RiderProjects\\desktop-rapidpack-Bulkowski-Stokowski\\RapidPack.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/wojteks/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\LEVEL_UP\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -2386,8 +2386,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/home/wojteks/RiderProjects/desktop-rapidpack-Bulkowski-Stokowski/RapidPack/RapidPack.csproj": {
-              "projectPath": "/home/wojteks/RiderProjects/desktop-rapidpack-Bulkowski-Stokowski/RapidPack/RapidPack.csproj"
+            "C:\\Users\\LEVEL_UP\\RiderProjects\\desktop-rapidpack-Bulkowski-Stokowski\\RapidPack\\RapidPack.csproj": {
+              "projectPath": "C:\\Users\\LEVEL_UP\\RiderProjects\\desktop-rapidpack-Bulkowski-Stokowski\\RapidPack\\RapidPack.csproj"
             }
           }
         }
@@ -2445,7 +2445,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/wojteks/.dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
