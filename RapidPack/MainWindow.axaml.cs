@@ -42,7 +42,6 @@ namespace RapidPack
             {
                 totalPrice.Text = blad.Message;
             }
-
         }
     }
 }

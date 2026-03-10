@@ -9,41 +9,40 @@ namespace RapidPack.Tests
         private readonly ParcelCalculator calculator = new ParcelCalculator();
 
         [Fact]
-        public void WeightAbove30Error()
+        public void WeightAbove30_ShouldShowError()
         {
             var error = Assert.Throws<Exception>(() =>
-                calculator.CalculatePrice(10, 10, 10, 35, false, "Standardowa"));
+                calculator.CalculatePrice(10, 10, 10, 31, false, "Standardowa"));
 
             Assert.Equal("Nie wozimy paczek cięższych niż 30 kg!", error.Message);
         }
 
         [Fact]
-        public void LargePackage50Percent()
+        public void LargePackageOver150_ShouldAdd50Percent()
         {
             // Paczka o sumie wymiarów >150 cm → +50%
-            decimal TotalPrice = calculator.CalculatePrice(50, 50, 60, 10, false, "Standardowa");
+            double TotalPrice = calculator.CalculatePrice(57, 50, 63, 10, false, "Standardowa");
 
             // 10 + 10*2 = 30 | 30 + 50% = 45
-            Assert.Equal(45m, TotalPrice);
+            Assert.Equal(45, TotalPrice);
         }
 
         [Fact]
-        public void PaletaAlways100()
+        public void PaletaShouldAlwaysCost100()
         {
             // Paleta cena = zawsze 100 zł
-            decimal price = calculator.CalculatePrice(200, 200, 200, 25, false, "Paleta");
+            double price = calculator.CalculatePrice(64, 223, 156, 25, false, "Paleta");
 
-            Assert.Equal(100m, price);
+            Assert.Equal(100, price);
         }
 
-        [Fact]
-        public void ExpressAndFragileExtraFees()
+        [Fact] public void ExpressAndFragile_ShouldAddExtraFees()
         {
             // Paczka Ostroznie + Express = + 10 + 15 = +25
-            decimal price = calculator.CalculatePrice(10, 10, 10, 5, true, "Ostrożnie (+10zł)");
+            double price = calculator.CalculatePrice(13, 7, 21, 5, true, "Ostrożnie (+10zł)");
 
             // 10 + 5*2 = 20 | 20 +10 (Ostrożnie) +15 (Express) = 45
-            Assert.Equal(45m, price);
+            Assert.Equal(45, price);
         }
     }
 }

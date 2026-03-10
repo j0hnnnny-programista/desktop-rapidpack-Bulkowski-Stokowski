@@ -4,33 +4,33 @@ namespace RapidPack.Services;
 
 public class ParcelCalculator
 {
-    public decimal CalculatePrice(decimal height, decimal width, decimal depth, decimal weight,
+    public double CalculatePrice(double height, double width, double depth, double weight,
         bool express, string packageType)
     {
-        decimal TotalPrice = 0;
+        double TotalPrice = 0.0;
         
         if (weight > 30)
             throw new Exception("Nie wozimy paczek cięższych niż 30 kg!");
         
         if (packageType.Contains("Paleta"))
         {
-            TotalPrice = 100m;
+            TotalPrice = 100;
         }
         else
         {
-            TotalPrice = 10m + (weight * 2m);
+            TotalPrice = 10 + (weight * 2);
 
-            decimal fullSize = height + width + depth;
+            double fullSize = height + width + depth;
 
             if (fullSize > 150)
-                TotalPrice *= 1.5m;
+                TotalPrice *= 1.5;
 
             if (packageType.Contains("Ostrożnie"))
-                TotalPrice += 10m;
+                TotalPrice += 10;
         }
         
         if (express)
-            TotalPrice += 15m;
+            TotalPrice += 15;
         
         return TotalPrice;
     }
