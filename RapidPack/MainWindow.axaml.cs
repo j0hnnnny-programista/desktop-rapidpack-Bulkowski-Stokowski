@@ -23,7 +23,7 @@ namespace RapidPack
                     !decimal.TryParse(PackDepth.Text, out decimal depth) ||
                     !decimal.TryParse(PackWeight.Text, out decimal weight))
                 {
-                    TotalPrice.Text = "Błąd: wpisz liczby!";
+                    totalPrice.Text = "Błąd: wpisz liczby!";
                     return;
                 }
                 
@@ -36,11 +36,11 @@ namespace RapidPack
 
                 decimal price = calculator.CalculatePrice(height, width, depth, weight, express, shipmentType);
 
-                TotalPrice.Text = $"Cena: {price} zł";
+                totalPrice.Text = $"Cena: {price} zł";
             }
             catch (Exception blad)
             {
-                TotalPrice.Text = blad.Message;
+                totalPrice.Text = blad.Message;
             }
 
         }

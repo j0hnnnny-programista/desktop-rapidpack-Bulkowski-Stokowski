@@ -1369,19 +1369,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LEVEL_UP\\.nuget\\packages\\": {}
+    "/home/wojteks/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LEVEL_UP\\RiderProjects\\desktop-rapidpack-Bulkowski-Stokowski\\RapidPack\\RapidPack.csproj",
+      "projectUniqueName": "/home/wojteks/RiderProjects/desktop-rapidpack-Bulkowski-Stokowski/RapidPack/RapidPack.csproj",
       "projectName": "RapidPack",
-      "projectPath": "C:\\Users\\LEVEL_UP\\RiderProjects\\desktop-rapidpack-Bulkowski-Stokowski\\RapidPack\\RapidPack.csproj",
-      "packagesPath": "C:\\Users\\LEVEL_UP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LEVEL_UP\\RiderProjects\\desktop-rapidpack-Bulkowski-Stokowski\\RapidPack\\obj\\",
+      "projectPath": "/home/wojteks/RiderProjects/desktop-rapidpack-Bulkowski-Stokowski/RapidPack/RapidPack.csproj",
+      "packagesPath": "/home/wojteks/.nuget/packages/",
+      "outputPath": "/home/wojteks/RiderProjects/desktop-rapidpack-Bulkowski-Stokowski/RapidPack/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LEVEL_UP\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/wojteks/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -1448,7 +1448,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/home/wojteks/.dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
