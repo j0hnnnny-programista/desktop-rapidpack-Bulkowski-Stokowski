@@ -20,7 +20,7 @@ namespace RapidPack.Tests
         [Fact]
         public void LargePackageOver150_ShouldAdd50Percent()
         {
-            // Paczka o sumie wymiarów >150 cm → +50%
+            // Paczka o sumie wymiarów >150 cm = +50%
             double TotalPrice = calculator.CalculatePrice(57.6, 50.213, 63, 10, false, "Standardowa");
 
             // 10 + 10*2 = 30 | 30 + 50% = 45

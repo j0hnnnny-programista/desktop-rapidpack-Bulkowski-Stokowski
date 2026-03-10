@@ -18,12 +18,12 @@ namespace RapidPack
         {
             try
             {
-                if (!decimal.TryParse(PackHeight.Text, out decimal height) ||
-                    !decimal.TryParse(PackWidth.Text, out decimal width) ||
-                    !decimal.TryParse(PackDepth.Text, out decimal depth) ||
-                    !decimal.TryParse(PackWeight.Text, out decimal weight))
+                if (!double.TryParse(PackHeight.Text, out double height) ||
+                    !double.TryParse(PackWidth.Text, out double width) ||
+                    !double.TryParse(PackDepth.Text, out double depth) ||
+                    !double.TryParse(PackWeight.Text, out double weight))
                 {
-                    totalPrice.Text = "Błąd: wpisz liczby!";
+                    TotalPrice.Text = "Błąd: wpisz liczby!";
                     return;
                 }
                 
@@ -34,13 +34,13 @@ namespace RapidPack
                 if (ComboBox.SelectedItem is ComboBoxItem item)
                     shipmentType = item.Content?.ToString();
 
-                decimal price = calculator.CalculatePrice(height, width, depth, weight, express, shipmentType);
+                double totalPrice = calculator.CalculatePrice(height, width, depth, weight, express, shipmentType);
 
-                totalPrice.Text = $"Cena: {price} zł";
+                TotalPrice.Text = $"Cena: {totalPrice} zł";
             }
-            catch (Exception blad)
+            catch (Exception error)
             {
-                totalPrice.Text = blad.Message;
+                TotalPrice.Text = error.Message;
             }
         }
     }
