@@ -18,14 +18,31 @@ namespace RapidPack
         {
             try
             {
-                if (!int.TryParse(PackHeight.Text, out int height) ||
-                    !int.TryParse(PackWidth.Text, out int width) ||
-                    !int.TryParse(PackDepth.Text, out int depth) ||
-                    !int.TryParse(PackWeight.Text, out int weight))
+                if (!decimal.TryParse(PackHeight.Text, out decimal height) ||
+                    !decimal.TryParse(PackWidth.Text, out decimal width) ||
+                    !decimal.TryParse(PackDepth.Text, out decimal depth) ||
+                    !decimal.TryParse(PackWeight.Text, out decimal weight))
                 {
                     TotalPrice.Text = "Błąd: wpisz liczby!";
                     return;
                 }
+                
+                bool express = Express.IsChecked ?? false;
+
+                string shipmentType = "";
+
+                if (ComboBox.SelectedItem is ComboBoxItem item)
+                    shipmentType = item.Content?.ToString();
+
+                decimal price = calculator.CalculatePrice(height, width, depth, weight, express, shipmentType);
+
+                TotalPrice.Text = $"Cena: {price} zł";
+            }
+            catch (Exception blad)
+            {
+                TotalPrice.Text = blad.Message;
+            }
+
         }
     }
 }
