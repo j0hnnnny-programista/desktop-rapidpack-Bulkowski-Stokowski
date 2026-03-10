@@ -12,7 +12,7 @@ namespace RapidPack.Tests
         public void WeightAbove30_ShouldShowError()
         {
             var error = Assert.Throws<Exception>(() =>
-                calculator.CalculatePrice(10, 10, 10, 31, false, "Standardowa"));
+                calculator.CalculatePrice(5, 5.5, 5.9, 31.3, false, "Standardowa"));
 
             Assert.Equal("Nie wozimy paczek cięższych niż 30 kg!", error.Message);
         }
@@ -21,7 +21,7 @@ namespace RapidPack.Tests
         public void LargePackageOver150_ShouldAdd50Percent()
         {
             // Paczka o sumie wymiarów >150 cm → +50%
-            double TotalPrice = calculator.CalculatePrice(57, 50, 63, 10, false, "Standardowa");
+            double TotalPrice = calculator.CalculatePrice(57.6, 50.213, 63, 10, false, "Standardowa");
 
             // 10 + 10*2 = 30 | 30 + 50% = 45
             Assert.Equal(45, TotalPrice);
@@ -31,7 +31,7 @@ namespace RapidPack.Tests
         public void PaletaShouldAlwaysCost100()
         {
             // Paleta cena = zawsze 100 zł
-            double price = calculator.CalculatePrice(64, 223, 156, 25, false, "Paleta");
+            double price = calculator.CalculatePrice(64.4, 223.5, 156, 25.5, false, "Paleta");
 
             Assert.Equal(100, price);
         }
