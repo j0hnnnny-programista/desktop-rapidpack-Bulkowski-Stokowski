@@ -18,7 +18,7 @@ namespace RapidPack.Tests
         }
 
         [Fact]
-        public void LargePackageOver150_ShouldAdd50Percent()
+        public void PackageOver150cm_ShouldAdd50Percent()
         {
             // Paczka o sumie wymiarów >150 cm = +50%
             double TotalPrice = calculator.CalculatePrice(57.6, 50.213, 63, 10, false, "Standardowa");
@@ -38,11 +38,20 @@ namespace RapidPack.Tests
 
         [Fact] public void ExpressAndFragile_ShouldAddExtraFees()
         {
-            // Paczka Ostroznie + Express = + 10 + 15 = +25
+            // Paczka Ostroznie + Express = + 10 + 15 do ceny = +25
             double price = calculator.CalculatePrice(13, 7, 21, 5, true, "Ostrożnie (+10zł)");
 
             // 10 + 5*2 = 20 | 20 +10 (Ostrożnie) +15 (Express) = 45
             Assert.Equal(45, price);
+        }
+        
+        [Fact] public void Standard_ShouldStayTheSame()
+        {
+            // Paczka Standard = +0 do ceny
+            double price = calculator.CalculatePrice(13, 7, 21, 5, false, "Standard");
+
+            // 10 + 5*2 = 20 | 20 + 0 = 20
+            Assert.Equal(20, price);
         }
     }
 }
